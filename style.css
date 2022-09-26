@@ -1,0 +1,110 @@
+*{
+    font-family: sans-serif;
+    width: 100%; /*documento ocupa a tela toda da esqueda até a direita*/
+    margin: 0 auto; /*Alinha para que o texto fique sempre no centro*/
+    box-sizing: border-box; /* */
+}
+
+body{
+    background-color: #18181B; /*Cor do fundo*/
+    width: 100%; /* Largura */
+    height: 100vh; /* Altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* alinhando ao centro */
+    flex-direction: column;
+}
+
+.logo{    /* Imagem */
+    max-width: 600px; /* Largura maxima da imagem */
+    margin-bottom: 24px;
+}
+
+.container-input{   /* Essa é a classe gerada no html que contem o botão e slider*/
+    max-width: 480px;
+    margin: 14px 0;  /* Margem do botao e slider com zero a direita e a esquerda */
+}
+
+.container-input span{ /* Essa é a classe span com fontes  */
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+.slider{    /**/
+    -webkit-appearance: none;  /* Aparencia preenchida do slider, no caso none tirou a cor preenchida*/
+    width: 100%;
+    border-radius: 5px; /* Arredondamento das bordas do slider e botao*/
+    background: #DFDFDF; /* Cor do slider e o botao*/
+    height: 18px;  /* Altura */
+    outline: none;
+    margin-top: 8px; /* Separar o Tamanho caracter do slider de baixo*/
+}
+
+.button-cta{
+    height: 40px;
+    background-color: #3EB72B;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer; /* Significa que qndo passar o mouse vai aparecer a mãozinha de clicar*/
+    margin-top: 40px; /* Separa o espaço do slider de cima para o slider abaixo */
+    color: #DFDFDF; /* Cor da senha colocada */
+    font-weight: bold; /* Deixar a cor em negrito */
+    font-size: 20px; /* Aumentar o gerar senha */
+} 
+
+.container-password{
+    max-width: 480px;
+    margin: 14px 0; /* Margem 14 pixel em cima, baixo e 0 nas laterais*/
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Caracteres escritos vao ficar um abaixo do outro*/
+    cursor: pointer;
+}
+
+.title{
+    text-align: center;
+    color: #DFDFDF;
+    font-size: 28px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.password{   /* senha */
+    height: 60px;  /* altura */
+    background-color: rgba(0,0,0, 0.40); /* 0,40 foi 40% da parte escura */
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;  /* alinhando os caracteres no centro */
+    align-items: center;
+    color: #FFF;  /* cor do caractere escrito */
+    border: 1px solid #313131; /* borda */
+    transition: transform 0.5s;
+}
+
+.passoword:hover{
+    transform: scale(1,05);/* Qndo passar o cursor do mouse vai aumentar o tamanho para destaque */
+}
+
+.tooltip{
+    color: #FFF;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background: rgb(15, 15, 15);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    visibility: hidden; /* para não ficar visivel */
+    opacity: 0;  /* Add efeitos */
+    transition: all 0.5s ease-in-out;/* em todas as propriedades vai acontecer o efeito*/
+}
+
+.hide{
+    display: none; /* Desaparece essa classe que é a senha */
+}
+
+.container-password:hover .tooltip{
+  visibility: visible;  /* Volta a ficar visivel na tela */
+  bottom: 50px; /* Separando espaço do item de cima para o item abaixo*/
+  opacity: 1;
+}
